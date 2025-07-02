@@ -1,0 +1,1040 @@
+[
+    {
+        "topic": 1,
+        "id": 1,
+        "text": "Your company has serval departments. Each department has a number of virtual machines (VMs). The company has an Azure subscription that contains a resource group named RG1. All VMs are located in RG1. You want to associate each VM with its respective department. What should you do?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Create Azure Management Groups for each department."
+            },
+            {
+                "letter": "B",
+                "text": "Create a resource group for each department."
+            },
+            {
+                "letter": "C",
+                "text": "Assign tags to the virtual machines."
+            },
+            {
+                "letter": "D",
+                "text": "Modify the settings of the virtual machines."
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "Reference: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-using-tags",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 2,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an Azure Active Directory (Azure AD) subscription. You want to implement an Azure AD conditional access policy. The policy must be configured to require members of the Global Administrators group to use Multi-Factor Authentication and an Azure AD-joined device when they connect to Azure AD from untrusted locations. Solution: You access the multi-factor authentication page to alter the user settings. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 3,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an Azure Active Directory (Azure AD) subscription. You want to implement an Azure AD conditional access policy. The policy must be configured to require members of the Global Administrators group to use Multi-Factor Authentication and an Azure AD-joined device when they connect to Azure AD from untrusted locations. Solution: You access the Azure portal to alter the session control of the Azure AD conditional access policy. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 4,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an Azure Active Directory (Azure AD) subscription. You want to implement an Azure AD conditional access policy. The policy must be configured to require members of the Global Administrators group to use Multi-Factor Authentication and an Azure AD-joined device when they connect to Azure AD from untrusted locations. Solution: You access the Azure portal to alter the grant control of the Azure AD conditional access policy. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 5,
+        "text": "You are planning to deploy an Ubuntu Server virtual machine to your company's Azure subscription. You are required to implement a custom deployment that includes adding a particular trusted root certification authority (CA). Which of the following should you use to create the virtual machine?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "The New-AzureRmVm cmdlet."
+            },
+            {
+                "letter": "B",
+                "text": "The New-AzVM cmdlet."
+            },
+            {
+                "letter": "C",
+                "text": "The Create-AzVM cmdlet."
+            },
+            {
+                "letter": "D",
+                "text": "The az vm create command."
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "Once Cloud-init.txt has been created, you can deploy the VM with az vm create cmdlet, using the --custom-data parameter to provide the full path to the cloud-init.txt file. Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/linux/tutorial-automate-vm-deployment",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 6,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company makes use of Multi-Factor Authentication for when users are not in the office. The Per Authentication option has been configured as the usage model. After the acquisition of a smaller business and the addition of the new staff to Azure Active Directory (Azure AD), you are informed that these employees should also make use of Multi-Factor Authentication. To achieve this, the Per Enabled User setting must be set for the usage model. Solution: You reconfigure the existing usage model via the Azure portal. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Since it is not possible to change the usage model of an existing provider as it is right now, you have to create a new one and reactivate your existing server with activation credentials from the new provider. Reference: https://365lab.net/2015/04/11/switch-usage-model-in-azure-multi-factor-authentication-server/",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 7,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company's Azure solution makes use of Multi-Factor Authentication for when users are not in the office. The Per Authentication option has been configured as the usage model. After the acquisition of a smaller business and the addition of the new staff to Azure Active Directory (Azure AD), you are informed that these employees should also make use of Multi-Factor Authentication. To achieve this, the Per Enabled User setting must be set for the usage model. Solution: You reconfigure the existing usage model via the Azure CLI. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Since it is not possible to change the usage model of an existing provider as it is right now, you have to create a new one and reactivate your existing server with activation credentials from the new provider. Reference: https://365lab.net/2015/04/11/switch-usage-model-in-azure-multi-factor-authentication-server/",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 8,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company's Azure solution makes use of Multi-Factor Authentication for when users are not in the office. The Per Authentication option has been configured as the usage model. After the acquisition of a smaller business and the addition of the new staff to Azure Active Directory (Azure AD), you are informed that these employees should also make use of Multi-Factor Authentication. To achieve this, the Per Enabled User setting must be set for the usage model. Solution: You create a new Multi-Factor Authentication provider with a backup from the existing Multi-Factor Authentication provider data. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Since it is not possible to change the usage model of an existing provider as it is right now, you have to create a new one and reactivate your existing server with activation credentials from the new provider. Reference: https://365lab.net/2015/04/11/switch-usage-model-in-azure-multi-factor-authentication-server/",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 9,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an Azure Active Directory (Azure AD) tenant named weyland.com that is configured for hybrid coexistence with the on-premises Active Directory domain. You have a server named DirSync1 that is configured as a DirSync server. You create a new user account in the on-premise Active Directory. You now need to replicate the user information to Azure AD immediately. Solution: You run the Start-ADSyncSyncCycle -PolicyType Initial PowerShell cmdlet. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Reference: https://blog.kloud.com.au/2016/03/08/azure-ad-connect-manual-sync-cycle-with-powershell-start-adsyncsynccycle/",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 10,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an Azure Active Directory (Azure AD) tenant named weyland.com that is configured for hybrid coexistence with the on-premises Active Directory domain. You have a server named DirSync1 that is configured as a DirSync server. You create a new user account in the on-premise Active Directory. You now need to replicate the user information to Azure AD immediately. Solution: You use Active Directory Sites and Services to force replication of the Global Catalog on a domain controller. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 11,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an Azure Active Directory (Azure AD) tenant named weyland.com that is configured for hybrid coexistence with the on-premises Active Directory domain. You have a server named DirSync1 that is configured as a DirSync server. You create a new user account in the on-premise Active Directory. You now need to replicate the user information to Azure AD immediately. Solution: You restart the NetLogon service on a domain controller. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Community vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 12,
+        "text": "Your company has a Microsoft Azure subscription. The company has datacenters in Los Angeles and New York. You are configuring the two datacenters as geo-clustered sites for site resiliency. You need to recommend an Azure storage redundancy option. You have the following data storage requirements:\nData must be stored on multiple nodes.\nData must be stored on nodes in separate geographic locations.\nData can be read from the secondary location as well as from the primary location.\nWhich of the following Azure stored redundancy options should you recommend?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Geo-redundant storage"
+            },
+            {
+                "letter": "B",
+                "text": "Read-only geo-redundant storage"
+            },
+            {
+                "letter": "C",
+                "text": "Zone-redundant storage"
+            },
+            {
+                "letter": "D",
+                "text": "Locally redundant storage"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "RA-GRS allows you to have higher read availability for your storage account by providing \"read only\" access to the data replicated to the secondary location. Once you enable this feature, the secondary location may be used to achieve higher availability in the event the data is not available in the primary region. This is an \"opt-in\" feature which requires the storage account be geo-replicated. Reference: https://docs.microsoft.com/en-us/azure/storage/common/storage-redundancy\nCommunity vote distribution B (97%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 13,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an azure subscription that includes a storage account, a resource group, a blob container and a file share. A colleague named Jon Ross makes use of a solitary Azure Resource Manager (ARM) template to deploy a virtual machine and an additional Azure Storage account. You want to review the ARM template that was used by Jon Ross. Solution: You access the Virtual Machine blade. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "You should use the Resource Group blade. Reference: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template\nCommunity vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 14,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an azure subscription that includes a storage account, a resource group, a blob container and a file share. A colleague named Jon Ross makes use of a solitary Azure Resource Manager (ARM) template to deploy a virtual machine and an additional Azure Storage account. You want to review the ARM template that was used by Jon Ross. Solution: You access the Resource Group blade. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "To view a template from deployment history:\n1. Go to the resource group for your new resource group. Notice that the portal shows the result of the last deployment. Select this link.\n2. You see a history of deployments for the group. In your case, the portal probably lists only one deployment. Select this deployment.\n3. The portal displays a summary of the deployment. The summary includes the status of the deployment and its operations and the values that you provided for parameters. To see the template that you used for the deployment, select View template.\nReference: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template\nCommunity vote distribution A (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 15,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has an azure subscription that includes a storage account, a resource group, a blob container and a file share. A colleague named Jon Ross makes use of a solitary Azure Resource Manager (ARM) template to deploy a virtual machine and an additional Azure Storage account. You want to review the ARM template that was used by Jon Ross. Solution: You access the Container blade. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "You should use the Resource Group blade. Reference: https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-manager-export-template\nCommunity vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 16,
+        "text": "Your company has three virtual machines (VMs) that are included in an availability set. You try to resize one of the VMs, which returns an allocation failure message. It is imperative that the VM is resized. Which of the following actions should you take?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "You should only stop one of the VMs."
+            },
+            {
+                "letter": "B",
+                "text": "You should stop two of the VMs."
+            },
+            {
+                "letter": "C",
+                "text": "You should stop all three VMs."
+            },
+            {
+                "letter": "D",
+                "text": "You should remove the necessary VM from the availability set."
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "If the VM you wish to resize is part of an availability set, then you must stop all VMs in the availability set before changing the size of any VM in the availability set. The reason all VMs in the availability set must be stopped before performing the resize operation to a size that requires different hardware is that all running VMs in the availability set must be using the same physical hardware cluster. Therefore, if a change of physical hardware cluster is required to change the VM size then all VMs must be first stopped and then restarted one-by-one to a different physical hardware clusters. Reference: https://azure.microsoft.com/es-es/blog/resize-virtual-machines/ Community vote distribution C (96%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 17,
+        "text": "You have an Azure virtual machine (VM) that has a single data disk. You have been tasked with attaching this data disk to another Azure VM. You need to make sure that your strategy allows for the virtual machines to be offline for the least amount of time possible. Which of the following is the action you should take FIRST?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Stop the VM that includes the data disk."
+            },
+            {
+                "letter": "B",
+                "text": "Stop the VM that the data disk must be attached to."
+            },
+            {
+                "letter": "C",
+                "text": "Detach the data disk."
+            },
+            {
+                "letter": "D",
+                "text": "Delete the VM that includes the data disk."
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/detach-disk https://docs.microsoft.com/en-us/azure/lab-services/devtestlab-attach-detach-data-disk Community vote distribution C (75%) A (23%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 18,
+        "text": "Your company has an Azure subscription. You need to deploy a number of Azure virtual machines (VMs) using Azure Resource Manager (ARM) templates. You have been informed that the VMs will be included in a single availability set. You are required to make sure that the ARM template you configure allows for as many VMs as possible to remain accessible in the event of fabric failure or maintenance. Which of the following is the value that you should configure for the platformFaultDomainCount property?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "10"
+            },
+            {
+                "letter": "B",
+                "text": "30"
+            },
+            {
+                "letter": "C",
+                "text": "Min Value"
+            },
+            {
+                "letter": "D",
+                "text": "Max Value"
+            }
+        ],
+        "correct_answer": "D",
+        "comment": "The number of fault domains for managed availability sets varies by region - either two or three per region. Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/manage-availability Community vote distribution D (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 19,
+        "text": "Your company has an Azure subscription. You need to deploy a number of Azure virtual machines (VMs) using Azure Resource Manager (ARM) templates. You have been informed that the VMs will be included in a single availability set. You are required to make sure that the ARM template you configure allows for as many VMs as possible to remain accessible in the event of fabric failure or maintenance. Which of the following is the value that you should configure for the platformUpdateDomainCount property?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "10"
+            },
+            {
+                "letter": "B",
+                "text": "20"
+            },
+            {
+                "letter": "C",
+                "text": "30"
+            },
+            {
+                "letter": "D",
+                "text": "40"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Each virtual machine in your availability set is assigned an update domain and a fault domain by the underlying Azure platform. For a given availability set, five non-user-configurable update domains are assigned by default (Resource Manager deployments can then be increased to provide up to 20 update domains) to indicate groups of virtual machines and underlying physical hardware that can be rebooted at the same time. Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/availability-set-overview Community vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 20,
+        "text": "DRAG DROP - You have downloaded an Azure Resource Manager (ARM) template to deploy numerous virtual machines (VMs). The ARM template is based on a current VM, but must be adapted to reference an administrative password. You need to make sure that the password cannot be stored in plain text. You are preparing to create the necessary components to achieve your goal. Which of the following should you create to achieve your goal? Answer by dragging the correct option from the list to the answer area. Select and Place:",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "An Azure Key Vault"
+            },
+            {
+                "letter": "B",
+                "text": "An Azure Storage account"
+            },
+            {
+                "letter": "C",
+                "text": "Azure Active Directory (Azure AD) Identity Protection"
+            },
+            {
+                "letter": "D",
+                "text": "An access policy"
+            },
+            {
+                "letter": "E",
+                "text": "An Azure policy"
+            },
+            {
+                "letter": "F",
+                "text": "A backup policy"
+            }
+        ],
+        "correct_answer": "AD",
+        "comment": "You can use a template that allows you to deploy a simple Windows VM by retrieving the password that is stored in a Key Vault. Therefore, the password is never put in plain text in the template parameter file.",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 21,
+        "text": "Your company has an Azure Active Directory (Azure AD) tenant that is configured for hybrid coexistence with the on-premises Active Directory domain. The on-premise virtual environment consists of virtual machines (VMs) running on Windows Server 2012 R2 Hyper-V host servers. You have created some PowerShell scripts to automate the configuration of newly created VMs. You plan to create several new VMs. You need a solution that ensures the scripts are run on the new VMs. Which of the following is the best solution?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Configure a SetupComplete.cmd batch file in the %windir%\\setup\\scripts directory."
+            },
+            {
+                "letter": "B",
+                "text": "Configure a Group Policy Object (GPO) to run the scripts as logon scripts."
+            },
+            {
+                "letter": "C",
+                "text": "Configure a Group Policy Object (GPO) to run the scripts as startup scripts."
+            },
+            {
+                "letter": "D",
+                "text": "Place the scripts in a new virtual hard disk (VHD)."
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "After you deploy a Virtual Machine you typically need to make some changes before it's ready to use. This can be done manually, via Remote PowerShell, or using the CustomScript extension executed by the VM Agent. The CustomScript extension allows specifying scripts (.ps1) to run automatically during setup. Reference: https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/add-a-custom-script-to-windows-setup https://azure.microsoft.com/en-us/blog/automating-vm-customization-tasks-using-custom-script-extension/ Community vote distribution A (82%) C (18%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 22,
+        "text": "Your company has an Azure Active Directory (Azure AD) tenant that is configured for hybrid coexistence with the on-premises Active Directory domain. You plan to deploy several new virtual machines (VMs) in Azure. The VMs will have the same operating system and custom software requirements. You configure a reference VM in the on-premise virtual environment. You then generalize the VM to create an image. You need to upload the image to Azure to ensure that it is available for selection when you create the new Azure VMs. Which PowerShell cmdlets should you use?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Add-AzVM"
+            },
+            {
+                "letter": "B",
+                "text": "Add-AzVhd"
+            },
+            {
+                "letter": "C",
+                "text": "Add-AzImage"
+            },
+            {
+                "letter": "D",
+                "text": "Add-AzImageDataDisk"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "The Add-AzVhd cmdlet uploads on-premises virtual hard disks (.vhd files) to a blob storage account as fixed virtual hard disks. Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/upload-generalized-managed Community vote distribution B (94%) 6%",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 23,
+        "text": "DRAG DROP - Your company has an Azure subscription that includes a number of Azure virtual machines (VMs), which are all part of the same virtual network. Your company also has an on-premises Hyper-V server that hosts a VM, named VM1, which must be replicated to Azure. Which of the following objects must be created to achieve this goal? Answer by dragging the correct option from the list to the answer area.",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Hyper-V site"
+            },
+            {
+                "letter": "B",
+                "text": "Storage account"
+            },
+            {
+                "letter": "C",
+                "text": "Azure Recovery Services Vault"
+            },
+            {
+                "letter": "D",
+                "text": "Azure Traffic Manager instance"
+            },
+            {
+                "letter": "E",
+                "text": "Replication policy"
+            },
+            {
+                "letter": "F",
+                "text": "Endpoint"
+            }
+        ],
+        "correct_answer": "ACE",
+        "comment": null,
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 24,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company's Azure subscription includes two Azure networks named VirtualNetworkA and VirtualNetworkB. VirtualNetworkA includes a VPN gateway that is configured to make use of static routing. Also, a site-to-site VPN connection exists between your company's on-premises network and VirtualNetworkA. You have configured a point-to-site VPN connection to VirtualNetworkA from a workstation running Windows 10. After configuring virtual network peering between VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the company's on-premises network. However, you find that you cannot establish a connection to VirtualNetworkB from the Windows 10 workstation. You have to make sure that a connection to VirtualNetworkB can be established from the Windows 10 workstation. Solution: You choose the Allow gateway transit setting on VirtualNetworkA. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Allow gateway transit must be configured on the peered virtual network that does not have a gateway (VirtualNetworkB), but static routing and point-to-site VPN have limitations that prevent full transit.",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 25,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company's Azure subscription includes two Azure networks named VirtualNetworkA and VirtualNetworkB. VirtualNetworkA includes a VPN gateway that is configured to make use of static routing. Also, a site-to-site VPN connection exists between your company's on-premises network and VirtualNetworkA. You have configured a point-to-site VPN connection to VirtualNetworkA from a workstation running Windows 10. After configuring virtual network peering between VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the company's on-premises network. However, you find that you cannot establish a connection to VirtualNetworkB from the Windows 10 workstation. You have to make sure that a connection to VirtualNetworkB can be established from the Windows 10 workstation. Solution: You choose the Allow gateway transit setting on VirtualNetworkB. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Allow gateway transit is needed on the peered network without gateway (VirtualNetworkB), but static routing and point-to-site VPN limitations prevent the connection.",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 26,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company's Azure subscription includes two Azure networks named VirtualNetworkA and VirtualNetworkB. VirtualNetworkA includes a VPN gateway that is configured to make use of static routing. Also, a site-to-site VPN connection exists between your company's on-premises network and VirtualNetworkA. You have configured a point-to-site VPN connection to VirtualNetworkA from a workstation running Windows 10. After configuring virtual network peering between VirtualNetworkA and VirtualNetworkB, you confirm that you are able to access VirtualNetworkB from the company's on-premises network. However, you find that you cannot establish a connection to VirtualNetworkB from the Windows 10 workstation. You have to make sure that a connection to VirtualNetworkB can be established from the Windows 10 workstation. Solution: You download and re-install the VPN client configuration package on the Windows 10 workstation. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "After changes such as virtual network peering, the VPN client configuration must be re-downloaded and re-installed on the client machine to update routes.",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 27,
+        "text": "Your company has virtual machines (VMs) hosted in Microsoft Azure. The VMs are located in a single Azure virtual network named VNet1. The company has users that work remotely. The remote workers require access to the VMs on VNet1. You need to provide access for the remote workers. What should you do?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Configure a Site-to-Site (S2S) VPN."
+            },
+            {
+                "letter": "B",
+                "text": "Configure a VNet-toVNet VPN."
+            },
+            {
+                "letter": "C",
+                "text": "Configure a Point-to-Site (P2S) VPN."
+            },
+            {
+                "letter": "D",
+                "text": "Configure DirectAccess on a Windows Server 2012 server VM."
+            },
+            {
+                "letter": "E",
+                "text": "Configure a Multi-Site VPN."
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "A Point-to-Site (P2S) VPN gateway connection lets you create a secure connection to your virtual network from an individual client computer. Reference: https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-about-vpngateways",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 28,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has a Microsoft SQL Server Always On availability group configured on their Azure virtual machines (VMs). You need to configure an Azure internal load balancer as a listener for the availability group. Solution: You create an HTTP health probe on port 1433. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "The solution does not meet the goal because SQL Server Always On availability groups require a TCP health probe on port 1433, not an HTTP probe. Reference: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/databases/sql-database-ha-dr",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 29,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has a Microsoft SQL Server Always On availability group configured on their Azure virtual machines (VMs). You need to configure an Azure internal load balancer as a listener for the availability group. Solution: You set Session persistence to Client IP. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "The solution does not meet the goal because for SQL Server Always On availability group listeners, session persistence must be set to None or Client IP and protocol, but Client IP alone is insufficient. Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 30,
+        "text": "Note: The question is included in a number of questions that depicts the identical set-up. However, every question has a distinctive result. Establish if the solution satisfies the requirements. Your company has a Microsoft SQL Server Always On availability group configured on their Azure virtual machines (VMs). You need to configure an Azure internal load balancer as a listener for the availability group. Solution: You enable Floating IP. Does the solution meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Enabling Floating IP is required for Azure internal load balancers used as listeners for SQL Server Always On availability groups to properly direct traffic to the active node. Reference: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 31,
+        "text": "Your company has two on-premises servers named SRV01 and SRV02. Developers have created an application that runs on SRV01. The application calls a service on SRV02 by IP address. You plan to migrate the application on Azure virtual machines (VMs). You have configured two VMs on a single subnet in an Azure virtual network. You need to configure the two VMs with static internal IP addresses. What should you do?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Run the New-AzureRMVMConfig PowerShell cmdlet."
+            },
+            {
+                "letter": "B",
+                "text": "Run the Set-AzureSubnet PowerShell cmdlet."
+            },
+            {
+                "letter": "C",
+                "text": "Modify the VM properties in the Azure Management Portal."
+            },
+            {
+                "letter": "D",
+                "text": "Modify the IP properties in Windows Network and Sharing Center."
+            },
+            {
+                "letter": "E",
+                "text": "Run the Set-AzureStaticVNetIP PowerShell cmdlet."
+            }
+        ],
+        "correct_answer": "E",
+        "comment": "Specify a static internal IP for a previously created VM. If you want to set a static IP address for a VM that you previously created, you can do so by using the following cmdlets. If you already set an IP address for the VM and you want to change it to a different IP address, you'll need to remove the existing static IP address before running these cmdlets. See the instructions below to remove a static IP. For this procedure, you'll use the Update-AzureVM cmdlet. The Update-AzureVM cmdlet restarts the VM as part of the update process. The DIP that you specify will be assigned after the VM restarts. In this example, we set the IP address for VM2, which is located in cloud service StaticDemo. Get-AzureVM -ServiceName StaticDemo -Name VM2 | Set-AzureStaticVNetIP -IPAddress 192.168.4.7 | Update-AzureVM Community vote distribution E (75%) C (25%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 32,
+        "text": "Community vote distribution A (100%)",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "5"
+            },
+            {
+                "letter": "B",
+                "text": "10"
+            },
+            {
+                "letter": "C",
+                "text": "20"
+            },
+            {
+                "letter": "D",
+                "text": "40"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Each VM requires one network interface card (NIC) to have both a public and private IP address, and identical security rules can be applied using network security groups. Reference: https://docs.microsoft.com/en-us/azure/virtual-network/network-interface-overview",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 33,
+        "text": "Your company has an Azure Active Directory (Azure AD) subscription. You need to deploy five virtual machines (VMs) to your company's virtual network subnet. The VMs will each have both a public and private IP address. Inbound and outbound security rules for all of these virtual machines must be identical. Which of the following is the least amount of security groups needed for this configuration?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "4"
+            },
+            {
+                "letter": "B",
+                "text": "3"
+            },
+            {
+                "letter": "C",
+                "text": "2"
+            },
+            {
+                "letter": "D",
+                "text": "1"
+            }
+        ],
+        "correct_answer": "D",
+        "comment": "You can assign a single Network Security Group (NSG) with the required inbound and outbound rules to all VMs, ensuring identical security policies and minimizing the number of NSGs needed.",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 34,
+        "text": "Your company's Azure subscription includes Azure virtual machines (VMs) that run Windows Server 2016. One of the VMs is backed up every day using Azure Backup Instant Restore. When the VM becomes infected with data encrypting ransomware, you decide to recover the VM's files. Which of the following is TRUE in this scenario?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "You can only recover the files to the infected VM."
+            },
+            {
+                "letter": "B",
+                "text": "You can recover the files to any VM within the company's subscription."
+            },
+            {
+                "letter": "C",
+                "text": "You can only recover the files to a new VM."
+            },
+            {
+                "letter": "D",
+                "text": "You will not be able to recover the files."
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Community vote distribution D (100%).",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 35,
+        "text": "Your company's Azure subscription includes Azure virtual machines (VMs) that run Windows Server 2016. One of the VMs is backed up every day using Azure Backup Instant Restore. When the VM becomes infected with data encrypting ransomware, you are required to restore the VM. Which of the following actions should you take?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "You should restore the VM after deleting the infected VM."
+            },
+            {
+                "letter": "B",
+                "text": "You should restore the VM to any VM within the company's subscription."
+            },
+            {
+                "letter": "C",
+                "text": "You should restore the VM to a new Azure VM."
+            },
+            {
+                "letter": "D",
+                "text": "You should restore the VM to an on-premise Windows device."
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Community vote distribution\nC (89%) 11%",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 36,
+        "text": "You administer a solution in Azure that is currently having performance issues. You need to find the cause of the performance issues pertaining to metrics on the Azure infrastructure. Which of the following is the tool you should use?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Azure Traffic Analytics"
+            },
+            {
+                "letter": "B",
+                "text": "Azure Monitor"
+            },
+            {
+                "letter": "C",
+                "text": "Azure Activity Log"
+            },
+            {
+                "letter": "D",
+                "text": "Azure Advisor"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Metrics in Azure Monitor are stored in a time-series database which is optimized for analyzing time-stamped data. This makes metrics particularly suited for alerting and fast detection of issues.\nCommunity vote distribution\nB (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 37,
+        "text": "Your company has an Azure subscription that includes a Recovery Services vault. You want to use Azure Backup to schedule a backup of your company's virtual machines (VMs) to the Recovery Services vault. Which of the following VMs can you back up? Choose all that apply.",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "VMs that run Windows 10."
+            },
+            {
+                "letter": "B",
+                "text": "VMs that run Windows Server 2012 or higher."
+            },
+            {
+                "letter": "C",
+                "text": "VMs that have NOT been shut down."
+            },
+            {
+                "letter": "D",
+                "text": "VMs that run Debian 8.2+."
+            },
+            {
+                "letter": "E",
+                "text": "VMs that have been shut down."
+            }
+        ],
+        "correct_answer": "ABCDE",
+        "comment": "Azure Backup supports backup of 64-bit Windows server operating system from Windows Server 2008.\nAzure Backup supports backup of 64-bit Windows 10 operating system.\nAzure Backup supports backup of 64-bit Debian operating system from Debian 7.9+.\nAzure Backup supports backup of VM that are shutdown or offline.\nCommunity vote distribution\nABCDE (95%) 5%",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 38,
+        "text": "You have an Azure Active Directory (Azure AD) tenant named contoso.com. You have a CSV file that contains the names and email addresses of 500 external users. You need to create a guest user account in contoso.com for each of the 500 external users.\nSolution: You create a PowerShell script that runs the New-AzureADUser cmdlet for each user.\nDoes this meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "The New-AzureADUser cmdlet creates a user in Azure Active Directory (Azure AD). Instead, you should use the New-AzureADMSInvitation cmdlet which is used to invite a new external user to your directory.\nCommunity vote distribution\nB (100%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 39,
+        "text": "You have an Azure Active Directory (Azure AD) tenant named contoso.com. You have a CSV file that contains the names and email addresses of 500 external users. You need to create a guest user account in contoso.com for each of the 500 external users.\nSolution: From Azure AD in the Azure portal, you use the Bulk create user operation.\nDoes this meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Instead, you should use the New-AzureADMSInvitation cmdlet which is used to invite a new external user to your directory.\nCommunity vote distribution\nB (90%) A (10%)",
+        "image": null
+    },
+    {
+        "topic": 1,
+        "id": 40,
+        "text": "You have an Azure Active Directory (Azure AD) tenant named contoso.com. You have a CSV file that contains the names and email addresses of 500 external users. You need to create a guest user account in contoso.com for each of the 500 external users.\nSolution: You create a PowerShell script that runs the New-AzureADMSInvitation cmdlet for each external user.\nDoes this meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "Use the New-AzureADMSInvitation cmdlet which is used to invite a new external user to your directory.\nCommunity vote distribution\nA (88%) B (13%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 1,
+        "text": "HOTSPOT - You have an Azure subscription named Subscription1 that contains a resource group named RG1. In RG1, you create an internal load balancer named LB1 and a public load balancer named LB2. You need to ensure that an administrator named Admin1 can manage LB1 and LB2. The solution must follow the principle of least privilege. Which role should you assign to Admin1 for each task? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nTo add a backend pool to LB1:\nContributor on LB1\nNetwork Contributor on LB1\nNetwork Contributor on RG1\nOwner on LB1\nTo add a health probe to LB2:\nContributor on LB2\nNetwork Contributor on LB2\nNetwork Contributor on RG1\nOwner on LB2",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "To add a backend pool to LB1: Contributor on LB1"
+            },
+            {
+                "letter": "B",
+                "text": "To add a backend pool to LB1: Network Contributor on LB1"
+            },
+            {
+                "letter": "C",
+                "text": "To add a backend pool to LB1: Network Contributor on RG1"
+            },
+            {
+                "letter": "D",
+                "text": "To add a backend pool to LB1: Owner on LB1\n"
+            },
+            {
+                "letter": "E",
+                "text": "To add a health probe to LB2: Contributor on LB2"
+            },
+            {
+                "letter": "F",
+                "text": "To add a health probe to LB2: Network Contributor on LB2"
+            },
+            {
+                "letter": "G",
+                "text": "To add a health probe to LB2: Network Contributor on RG1"
+            },
+            {
+                "letter": "H",
+                "text": "To add a health probe to LB2: Owner on LB2"
+            }
+        ],
+        "correct_answer": "BF",
+        "comment": "The Network Contributor role lets you manage network resources like load balancers but does not grant access to them, thus following the principle of least privilege.\nReference: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 2,
+        "text": "You have an Azure subscription that contains an Azure Active Directory (Azure AD) tenant named contoso.com and an Azure Kubernetes Service (AKS) cluster named AKS1. An administrator reports that she is unable to grant access to AKS1 to the users in contoso.com. You need to ensure that access to AKS1 can be granted to the contoso.com users. What should you do first?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "From contoso.com, modify the Organization relationships settings."
+            },
+            {
+                "letter": "B",
+                "text": "From contoso.com, create an OAuth 2.0 authorization endpoint."
+            },
+            {
+                "letter": "C",
+                "text": "Recreate AKS1."
+            },
+            {
+                "letter": "D",
+                "text": "From AKS1, create a namespace."
+            }
+        ],
+        "correct_answer": "AC",
+        "comment": "You need to create an OAuth 2.0 authorization endpoint in Azure AD to enable access delegation for users in contoso.com to AKS1.\nReference: https://kubernetes.io/docs/reference/access-authn-authz/authentication/\nCommunity vote distribution AC (91%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 4,
+        "text": "HOTSPOT - You have an Azure Active Directory (Azure AD) tenant named contoso.com that contains the users shown in the following table:\n+--------+--------+-----------+\n| Name   | Type   | Member of |\n+--------+--------+-----------+\n| User1  | Member | Group1    |\n| User2  | Guest  | Group1    |\n| User3  | Member | None      |\n| UserA  | Member | Group2    |\n| UserB  | Guest  | Group2    |\n+--------+--------+-----------+\nUser3 is the owner of Group1.\nGroup2 is a member of Group1.\nYou configure an access review named Review1 as shown in the following exhibit:\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\n\n\n ---> Per rispondere Yes ad uno statement, indica Y dopo la lettera; per rispondere No, indica N (es. tutte vere rispondi AYBYCY - IN ORDINE ALFABETICO!) <---",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "User3 can perform an access review of User1."
+            },
+            {
+                "letter": "B",
+                "text": "User3 can perform an access review of UserA."
+            },
+            {
+                "letter": "C",
+                "text": "User3 can perform an access review of UserB."
+            }
+        ],
+        "correct_answer": "ANBNCY",
+        "comment": "Reference: https://docs.microsoft.com/en-us/azure/active-directory/governance/create-access-review",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 5,
+        "text": "HOTSPOT - You have the Azure management groups shown in the following table:\n+--------------------+----------------------+\n| Name               | In management group   |\n+--------------------+----------------------+\n| Tenant Root Group   | Not applicable       |\n| ManagementGroup1    | Tenant Root Group    |\n| ManagementGroup2    | Tenant Root Group    |\n| ManagementGroup1    | ManagementGroup1     |\n\nYou add Azure subscriptions to the management groups as shown in the following table:\n+--------------------+----------------------+\n+---------------+---------------------+\n| Name          | Management group    |\n+---------------+---------------------+\n| Subscription1 | ManagementGroup21   |\n| Subscription2 | ManagementGroup12   |\n+---------------+---------------------+\n\nYou create the Azure policies shown in the following table:\n+---------------------------+------------------+---------------------+\n| Name                      | Parameter        | Scope               |\n+---------------------------+------------------+---------------------+\n| Not allowed resource types | virtualNetworks  | Tenant Root Group    |\n| Allowed resource types     | virtualNetworks  | ManagementGroup12    |\n+---------------------------+------------------+---------------------+\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No. \nNOTE: Each correct selection is worth one point.\n\n\n ---> Per rispondere Yes ad uno statement, indica Y dopo la lettera; per rispondere No, indica N (es. tutte vere rispondi AYBYCY - IN ORDINE ALFABETICO!) <---",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "You can create a virtual network in Subscription1."
+            },
+            {
+                "letter": "B",
+                "text": "You can create a virtual network in Subscription2."
+            },
+            {
+                "letter": "C",
+                "text": "You can add Subscription1 to ManagementGroup11."
+            }
+        ],
+        "correct_answer": "ANBYCY",
+        "comment": "Box 1: No - Virtual networks are not allowed at the root and is inherited. Deny overrides allowed.\nBox 2: Yes - Virtual Machines can be created on a Management Group provided the user has the required RBAC permissions.\nBox 3: Yes - Subscriptions can be moved between Management Groups provided the user has the required RBAC permissions.\nReference: https://docs.microsoft.com/en-us/azure/governance/management-groups/overview https://docs.microsoft.com/enus/azure/governance/management-groups/manage#moving-management-groups-and-subscriptions",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 6,
+        "text": "You have an Azure policy as shown in the following exhibit:\n[IMAGE]\nWhat is the effect of the policy?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "You are prevented from creating Azure SQL servers anywhere in Subscription 1."
+            },
+            {
+                "letter": "B",
+                "text": "You can create Azure SQL servers in ContosoRG1 only."
+            },
+            {
+                "letter": "C",
+                "text": "You are prevented from creating Azure SQL Servers in ContosoRG1 only."
+            },
+            {
+                "letter": "D",
+                "text": "You can create Azure SQL servers in any resource group within Subscription 1."
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "You are prevented from creating Azure SQL servers anywhere in Subscription 1 with the exception of ContosoRG1.\nComunity vote distribution B (100%)",
+        "image": null
+    }
+]

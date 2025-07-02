@@ -57,8 +57,8 @@ def main():
                     print_correct_answer(extracted_quests[i])
                     print()
                     comments = input("Commento: ")
-                    quest_to_review.write(str(extracted_quests[i].id) + ": " + comments + "\n")
-                    quest_to_recheck.write(str(extracted_quests[i].id) + "\n")
+                    quest_to_review.write("Topic " + str(extracted_quests[i].topic) + " - Id " + str(extracted_quests[i].id) + ": " + comments + "\n")
+                    quest_to_recheck.write("Topic " + str(extracted_quests[i].topic) + " - Id " + str(extracted_quests[i].id) + "\n")
 
                 print()
                 input("Premi invio per continuare...")

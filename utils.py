@@ -68,14 +68,14 @@ def clean_wrong_quests():
         file.write('')
 
 def extract_questions() -> list[Question]:
-    with open("data/pca_questions.json", 'r') as json_file:
+    with open("data/az104_questions.json", 'r') as json_file:
         questions_data = json.load(json_file)
 
     questions = []
 
     for question_data in questions_data:
         question = Question()
-        #question.topic = question_data['topic']
+        question.topic = question_data['topic']
         question.id = question_data['id']
         question.text = question_data['text']
         question.correct_answer = question_data['correct_answer']
