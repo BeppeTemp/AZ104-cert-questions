@@ -75,7 +75,7 @@ def extract_questions() -> list[Question]:
 
     for question_data in questions_data:
         question = Question()
-        question.topic = question_data['topic']
+        #question.topic = question_data['topic']
         question.id = question_data['id']
         question.text = question_data['text']
         question.correct_answer = question_data['correct_answer']

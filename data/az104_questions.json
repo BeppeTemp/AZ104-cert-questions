@@ -1014,7 +1014,7 @@
     {
         "topic": 2,
         "id": 6,
-        "text": "You have an Azure policy as shown in the following exhibit:\n[IMAGE]\nWhat is the effect of the policy?",
+        "text": "You have an Azure policy as shown in the following exhibit:\n[IMAGE DESCRIPTION:\nSCOPE\nScope: Subsctiption 1\nExclusions: Subscription 1/ContosoRG1\nBASICS\nPolicy definition: Not allowed resource types\nAssignment name: Not allowed resource types\nAssignment ID: /subscriptions/5eb8d0b6-ce3-4ce0-a631-9f5321bedabb/providers/Microsoft.Authorization/policyAssignments/0e6fb866bf854f54accae29\nAssignes by: admin1@contoso.com\nPARAMETERS\nNot allowed resource types: Microsoft.Sql/servers]\nWhat is the effect of the policy?",
         "answers": [
             {
                 "letter": "A",
@@ -1035,6 +1035,358 @@
         ],
         "correct_answer": "B",
         "comment": "You are prevented from creating Azure SQL servers anywhere in Subscription 1 with the exception of ContosoRG1.\nComunity vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 7,
+        "text": "HOTSPOT -\nYou have an Azure subscription that contains the resources shown in the following table:\n+--------+------------------+-------------------+--------------------+\n| Name   | Type             | Resource group    | Tag                |\n+--------+------------------+-------------------+--------------------+\n| RG6    | Resource group   | Not applicable    | None               |\n| VNET1  | Virtual network  | RG6               | Department: D1     |\n+--------+------------------+-------------------+--------------------+\nYou assign a policy to RG6 as shown in the following table:\n+------------+---------------------+-------------------------------+\n| Section    | Setting             | Value                         |\n+------------+---------------------+-------------------------------+\n| Scope      | Scope               | Subscription1/RG6             |\n| Scope      | Exclusions          | None                          |\n| Basics     | Policy definition   | Apply tag and its default value |\n| Basics     | Assignment name     | Apply tag and its default value |\n| Parameters | Tag name            | Label                         |\n| Parameters | Tag value           | Value1                        |\n+------------+---------------------+-------------------------------+\nTo RG6, you apply the tag: RGroup: RG6.\nYou deploy a virtual network named VNET2 to RG6.\nWhich tags apply to VNET1 and VNET2? To answer, select the appropriate options in the answer area.\nNOTE: Each correct selection is worth one point.\nHot Area:\nVNET:\n- None\n- Department: D1 only\n- Department D1, and RGroup: RG6 only\n- Department D1, and Label: Value1 only\n- Department D1, RGroup: RG6, and Label: Value1\nVNET2:\n- None\n- RGroup: RG6 only\n- Label: Value1 only\n- RGroup: RG6, and Label Value1",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "VNET1 - None"
+            },
+            {
+                "letter": "B",
+                "text": "VNET1 - Department: D1 only"
+            },
+            {
+                "letter": "C",
+                "text": "VNET1 - Department: D1, and RGroup: RG6 only"
+            },
+            {
+                "letter": "D",
+                "text": "VNET1 - Department: D1, and Label: Value1 only"
+            },
+            {
+                "letter": "E",
+                "text": "VNET1 - Department: D1, RGroup: RG6, and Label: Value1"
+            },
+            {
+                "letter": "F",
+                "text": "VNET2 - None"
+            },
+            {
+                "letter": "G",
+                "text": "VNET2 - RGroup: RG6 only"
+            },
+            {
+                "letter": "H",
+                "text": "VNET2 - Label: Value1 only"
+            },
+            {
+                "letter": "I",
+                "text": "VNET2 - RGroup: RG6, and Label: Value1"
+            }
+        ],
+        "correct_answer": "DH",
+        "comment": "VNET1: Department: D1, and Label:Value1 only. Tags applied to the resource group or subscription are not inherited by the resources.\nNote: Azure Policy allows you to use either built-in or custom-defined policy definitions and assign them to either a specific resource group or across a whole Azure subscription.\nVNET2: Label:Value1 only.\nIncorrect Answers:\nRGROUP: RG6 - Tags applied to the resource group or subscription are not inherited by the resources.\nReference: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-policies",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 8,
+        "text": "You have an Azure subscription named AZPT1 that contains the resources shown in the following table:\n+-------------+-----------------------------------------------+\n| Name        | Type                                          |\n+-------------+-----------------------------------------------+\n| storage1    | Azure Storage account                         |\n| VNET1       | Virtual network                               |\n| VM1         | Azure virtual machine                         |\n| VM1Managed  | Managed disk for VM1                          |\n| RVAULT1     | Recovery Services vault for the site recovery of VM1 |\n+-------------+-----------------------------------------------+\nYou create a new Azure subscription named AZPT2.\nYou need to identify which resources can be moved to AZPT2.\nWhich resources should you identify?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "VM1, storage1, VNET1, and VM1Managed only"
+            },
+            {
+                "letter": "B",
+                "text": "VM1 and VM1Managed only"
+            },
+            {
+                "letter": "C",
+                "text": "VM1, storage1, VNET1, VM1Managed, and RVAULT1"
+            },
+            {
+                "letter": "D",
+                "text": "RVAULT1 only"
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "You can move resources between subscriptions if they are in the same Azure Active Directory (Azure AD) tenant and meet certain conditions. In this case, VM1, storage1, VNET1, VM1Managed, and RVAULT1 can all be moved to AZPT2 as they are all part of the same tenant and meet the requirements for moving resources.\nReference: https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/move-resource-group-and-subscription\n Community vote distribution C (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 9,
+        "text": "You recently created a new Azure subscription that contains a user named Admin1.\nAdmin1 attempts to deploy an Azure Marketplace resource by using an Azure Resource Manager template. Admin1 deploys the template by using Azure PowerShell and receives the following error message: `User failed validation to purchase resources. Error message: `Legal terms have not been accepted for this item on this subscription. To accept legal terms, please go to the Azure portal (http://go.microsoft.com/fwlink/?LinkId=534873) and configure programmatic deployment for the Marketplace item or create it there for the first time.`\nYou need to ensure that Admin1 can deploy the Marketplace resource successfully.\nWhat should you do?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "From Azure PowerShell, run the Set-AzApiManagementSubscription cmdlet"
+            },
+            {
+                "letter": "B",
+                "text": "From the Azure portal, register the Microsoft.Marketplace resource provider"
+            },
+            {
+                "letter": "C",
+                "text": "From Azure PowerShell, run the Set-AzMarketplaceTerms cmdlet"
+            },
+            {
+                "letter": "D",
+                "text": "From the Azure portal, assign the Billing administrator role to Admin1"
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "To resolve the error regarding unaccepted legal terms when deploying a Marketplace resource, you must accept the terms programmatically using PowerShell. The correct cmdlet is `Set-AzMarketplaceTerms`, which allows you to accept the legal terms for Marketplace items so they can be deployed through templates.\nReference: https://docs.microsoft.com/en-us/powershell/module/az.marketplaceordering/set-azmarketplaceterms?view=azps-4.1.0 Community vote distribution C (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 10,
+        "text": "You have an Azure Active Directory (Azure AD) tenant that contains 5,000 user accounts.\nYou create a new user account named AdminUser1.\nYou need to assign the User administrator administrative role to AdminUser1.\nWhat should you do from the user account properties?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "From the Licenses blade, assign a new license"
+            },
+            {
+                "letter": "B",
+                "text": "From the Directory role blade, modify the directory role"
+            },
+            {
+                "letter": "C",
+                "text": "From the Groups blade, invite the user account to a new group"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "To assign the User administrator role to a user in Azure AD, you must use the Directory role blade in the user's properties. From there, you can add the desired role.\nSteps to assign a role to a user:\n1. Sign in to the Azure portal with an account that's a global admin or privileged role admin for the directory.\n2. Select Azure Active Directory, select Users, and then select a specific user from the list.\n3. For the selected user, select Directory role, select Add role, and then pick the appropriate admin roles from the Directory roles list, such as Conditional access administrator.\n4. Press Select to save.\nReference: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-users-assign-role-azure-portal\n",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 11,
+        "text": "You have an Azure Active Directory (Azure AD) tenant named contoso.onmicrosoft.com that contains 100 user accounts.\nYou purchase 10 Azure AD Premium P2 licenses for the tenant.\nYou need to ensure that 10 users can use all the Azure AD Premium features.\nWhat should you do?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "From the Licenses blade of Azure AD, assign a license"
+            },
+            {
+                "letter": "B",
+                "text": "From the Groups blade of each user, invite the users to a group"
+            },
+            {
+                "letter": "C",
+                "text": "From the Azure AD domain, add an enterprise application"
+            },
+            {
+                "letter": "D",
+                "text": "From the Directory role blade of each user, modify the directory role"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "To activate Azure AD Premium P2 features for specific users, you must assign the Premium license to each of them individually or through group-based licensing.\nReference: https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/license-users-groups\nCommunity vote distribution A (90%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 12,
+        "text": "You have an Azure subscription named Subscription1 and an on-premises deployment of Microsoft System Center Service Manager.\nSubscription1 contains a virtual machine named VM1.\nYou need to ensure that an alert is set in Service Manager when the amount of available memory on VM1 is below 10 percent.\nWhat should you do first?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Create an automation runbook"
+            },
+            {
+                "letter": "B",
+                "text": "Deploy a function app"
+            },
+            {
+                "letter": "C",
+                "text": "Deploy the IT Service Management Connector (ITSM)"
+            },
+            {
+                "letter": "D",
+                "text": "Create a notification"
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "The IT Service Management Connector (ITSMC) integrates Azure with supported ITSM tools like System Center Service Manager. It enables the creation of work items based on Azure alerts, such as a memory threshold breach.\nReference: https://docs.microsoft.com/en-us/azure/azure-monitor/platform/itsmc-overview\nCommunity vote distribution C (84%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 13,
+        "text": "You sign up for Azure Active Directory (Azure AD) Premium P2.\nYou need to add a user named admin1@contoso.com as an administrator on all the computers that will be joined to the Azure AD domain.\nWhat should you configure in Azure AD?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Device settings from the Devices blade"
+            },
+            {
+                "letter": "B",
+                "text": "Providers from the MFA Server blade"
+            },
+            {
+                "letter": "C",
+                "text": "User settings from the Users blade"
+            },
+            {
+                "letter": "D",
+                "text": "General settings from the Groups blade"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "When you connect a Windows device with Azure AD using an Azure AD join, Azure AD adds the following security principles to the local administrators group on the device:\n- The Azure AD global administrator role\n- The Azure AD device administrator role\n- The user performing the Azure AD join\nIn the Azure portal, you can manage the device administrator role on the Devices page. To open the Devices page:\n1. Sign in to your Azure portal as a global administrator or device administrator.\n2. On the left navbar, click Azure Active Directory.\n3. In the Manage section, click Devices.\n4. On the Devices page, click Device settings.\n5. To modify the device administrator role, configure Additional local administrators on Azure AD joined devices.\nReference: https://docs.microsoft.com/en-us/azure/active-directory/devices/assign-local-admin\nCommunity vote distribution A (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 14,
+        "text": "HOTSPOT -\nYou have Azure Active Directory tenant named Contoso.com that includes following users:\n+--------+-----------------------------+\n| Name   | Role                        |\n+--------+-----------------------------+\n| User1  | Cloud device administrator  |\n| User2  | User administrator          |\n+--------+-----------------------------+\nContoso.com includes following Windows 10 devices:\n+---------+---------------------+\n| Name    | Join type           |\n+---------+---------------------+\n| Device1 | Azure AD registered |\n| Device2 | Azure AD joined     |\n+---------+---------------------+\nYou create following security groups in Contoso.com:\n+--------+-------------------+--------+\n| Name   | Membership Type   | Owner  |\n+--------+-------------------+--------+\n| Group1 | Assigned           | User2  |\n| Group2 | Dynamic Device     | User2  |\n+--------+-------------------+--------+\nFor each of the following statements, select Yes if the statement is true. Otherwise, select No.\nNOTE: Each correct selection is worth one point.\nHot Area:\n- User1 can add Device 2 to Group1 (Y/N)\n - User2 can add Device 1 to Group1 (Y/N)\nUser2 can add Device2 to Group2 (Y/N)\n\n ---> Per rispondere Yes ad uno statement, indica Y dopo la lettera; per rispondere No, indica N (es. tutte vere rispondi AYBYCY - IN ORDINE ALFABETICO!) <---",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "User1 can add Device2 to Group1."
+            },
+            {
+                "letter": "B",
+                "text": "User2 can add Device1 to Group1."
+            },
+            {
+                "letter": "C",
+                "text": "User2 can add Device2 to Group2."
+            }
+        ],
+        "correct_answer": "AYBNCY",
+        "comment": "Statement 1 - Yes:\n- User1 is a Cloud Device Administrator\n- Device2 is Azure AD joined\n- Group1 has the assigned to join type. User1 is the owner of Group1.\nStatement 2 - No:\n- User2 is a User Administrator.\n- Device1 is Azure AD registered.\n- Group1 has the assigned join type, and the owner is User1.\nNote: Azure AD registered devices utilize an account managed by the end user, this account is either a Microsoft account or another locally managed credential.\nStatement 3 - Yes:\n- User2 is a User Administrator.\n- Device2 is Azure AD joined.\n- Group2 has the Dynamic Device join type, and the owner is User2.\nReference: https://docs.microsoft.com/en-us/azure/active-directory/devices/overview",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 15,
+        "text": "You have an Azure subscription that contains a resource group named RG26. RG26 is set to the West Europe location and is used to create temporary resources for a project. RG26 contains the resources shown in the following table:\n+-------+--------------------------+--------------+\n| Name  | Type                     | Location     |\n+-------+--------------------------+--------------+\n| VM1   | Virtual machine          | North Europe |\n| RGV\\  | Recovery Services vault  | North Europe |\n| SQLD01| SQL server in Azure VM   | North Europe |\n| sa001 | Storage account          | West Europe  |\n+-------+--------------------------+--------------+\nSQLDB01 is backed up to RGV1. When the project is complete, you attempt to delete RG26 from the Azure portal. The deletion fails. You need to delete RG26. What should you do first?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Delete VM1"
+            },
+            {
+                "letter": "B",
+                "text": "Stop VM1"
+            },
+            {
+                "letter": "C",
+                "text": "Stop the backup of SQLDB01"
+            },
+            {
+                "letter": "D",
+                "text": "Delete sa001"
+            }
+        ],
+        "correct_answer": "C",
+        "comment": "The deletion of the resource group RG26 fails because SQLDB01 is backed up to RGV1. You must stop the backup of SQLDB01 first to successfully delete the resource group.\nCommunity vote distribution: C (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 16,
+        "text": "You have an Azure subscription named Subscription1 that contains a virtual network named VNet1. VNet1 is in a resource group named RG1. Subscription1 has a user named User1. User1 has the following roles:\n✑ Reader\n✑ Security Admin\n✑ Security Reader\nYou need to ensure that User1 can assign the Reader role for VNet1 to other users.\nWhat should you do?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Remove User1 from the Security Reader and Reader roles for Subscription1."
+            },
+            {
+                "letter": "B",
+                "text": "Assign User1 the User Access Administrator role for VNet1."
+            },
+            {
+                "letter": "C",
+                "text": "Assign User1 the Network Contributor role for VNet1."
+            },
+            {
+                "letter": "D",
+                "text": "Assign User1 the Network Contributor role for RG1."
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "Has full access to all resources including the right to delegate access to others.\nNote:\nThere are several versions of this question in the exam. The question has two possible correct answers:\n- Assign User1 the User Access Administrator role for VNet1.\n- Assign User1 the Owner role for VNet1.\nOther incorrect answer options you may see on the exam include the following:\n- Assign User1 the Contributor role for VNet1.\n- Remove User1 from the Security Reader and Reader roles for Subscription1. Assign User1 the Contributor role for Subscription1.\n- Remove User1 from the Security Reader role for Subscription1. Assign User1 the Contributor role for RG1.\nReference: https://docs.microsoft.com/en-us/azure/role-based-access-control/overview\nCommunity vote distribution B (86%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 17,
+        "text": "You have an Azure Active Directory (Azure AD) tenant named contosocloud.onmicrosoft.com. Your company has a public DNS zone for contoso.com. You add contoso.com as a custom domain name to Azure AD. You need to ensure that Azure can verify the domain name. Which type of DNS record should you create?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "MX"
+            },
+            {
+                "letter": "B",
+                "text": "NSEC"
+            },
+            {
+                "letter": "C",
+                "text": "PTR"
+            },
+            {
+                "letter": "D",
+                "text": "RRSIG"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "To verify your custom domain name (example)\n1. Sign in to the Azure portal using a Global administrator account for the directory.\n2. Select Azure Active Directory, and then select Custom domain names.\n3. On the Fabrikam - Custom domain names page, select the custom domain name, Contoso.\n4. On the Contoso page, select Verify to make sure your custom domain is properly registered and is valid for Azure AD. Use either the TXT or the MX record type.\nNote:\nThere are several versions of this question in the exam. The question can have two correct answers:\n1. MX\n2. TXT\nThe question can also have other incorrect answer options, including the following:\n1. SRV\n2. NSEC3\nReference: https://docs.microsoft.com/en-us/azure/dns/dns-web-sites-custom-domain\nCommunity vote distribution A (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 18,
+        "text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou have an Azure Directory (Azure AD) tenant named Adatum and an Azure Subscription named Subscription1. Adatum contains a group named Developers. Subscription1 contains a resource group named Dev.\n\nYou need to provide the Developers group with the ability to create Azure logic apps in the Dev resource group.\n\nSolution: On Subscription1, you assign the DevTest Labs User role to the Developers group.\n\nDoes this meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "DevTest Labs User role only lets you connect, start, restart, and shutdown virtual machines in your Azure DevTest Labs.\nThe Logic App Contributor role lets you manage logic app, but not access to them. It provides access to view, edit, and update a logic app.\nReference: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles https://docs.microsoft.com/en-us/azure/logic-apps/logicapps-securing-a-logic-app\nCommunity vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 19,
+        "text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou have an Azure Directory (Azure AD) tenant named Adatum and an Azure Subscription named Subscription1. Adatum contains a group named Developers. Subscription1 contains a resource group named Dev.\n\nYou need to provide the Developers group with the ability to create Azure logic apps in the Dev resource group.\n\nSolution: On Subscription1, you assign the Logic App Operator role to the Developers group.\n\nDoes this meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "B",
+        "comment": "You would need the Logic App Contributor role.\nReference: https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles https://docs.microsoft.com/en-us/azure/logic-apps/logicapps-securing-a-logic-app\nCommunity vote distribution B (100%)",
+        "image": null
+    },
+    {
+        "topic": 2,
+        "id": 20,
+        "text": "Note: This question is part of a series of questions that present the same scenario. Each question in the series contains a unique solution that might meet the stated goals. Some question sets might have more than one correct solution, while others might not have a correct solution.\n\nAfter you answer a question in this section, you will NOT be able to return to it. As a result, these questions will not appear in the review screen.\n\nYou have an Azure Directory (Azure AD) tenant named Adatum and an Azure Subscription named Subscription1. Adatum contains a group named Developers. Subscription1 contains a resource group named Dev.\n\nYou need to provide the Developers group with the ability to create Azure logic apps in the Dev resource group.\n\nSolution: On Dev, you assign the Contributor role to the Developers group.\n\nDoes this meet the goal?",
+        "answers": [
+            {
+                "letter": "A",
+                "text": "Yes"
+            },
+            {
+                "letter": "B",
+                "text": "No"
+            }
+        ],
+        "correct_answer": "A",
+        "comment": "The Contributor role can manage all resources (and add resources) in a Resource Group.\nCommunity vote distribution A (100%)",
         "image": null
     }
 ]
